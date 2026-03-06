@@ -63,8 +63,8 @@ ai-projects/
 ### 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/yourusername/ai-projects.git
-cd ai-projects
+git clone https://github.com/yourusername/nlp-faq-bot.git
+cd nlp-faq-bot
 ```
 
 ### 2️⃣ Create a virtual environment
