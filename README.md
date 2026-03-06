@@ -47,6 +47,10 @@ Example intents:
 
 * Contact information
 
+* Pricing
+
+* Services
+
 * Exit / Goodbye
 
 ### 🛠 Technologies Used
