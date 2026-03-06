@@ -1,11 +1,9 @@
-# ai-projects
-
-## Project 1: FAQ Chatbot (spaCy NLP)
+# FAQ Chatbot (spaCy NLP)
 
 A simple command-line FAQ chatbot built with Python using natural language processing from spaCy.
 The chatbot detects user intent using lemmatization and simple keyword matching to respond to common questions like greetings, business hours, location, and contact information.
 
-### 📌 Features
+## 📌 Features
 
 * Intent detection using NLP
 
@@ -17,7 +15,7 @@ The chatbot detects user intent using lemmatization and simple keyword matching 
 
 * Clean and beginner-friendly Python implementation
 
-### 🧠 How It Works
+## 🧠 How It Works
 
 The chatbot processes user input using spaCy's NLP pipeline. The input text is:
 
@@ -53,13 +51,13 @@ Example intents:
 
 * Exit / Goodbye
 
-### 🛠 Technologies Used
+## 🛠 Technologies Used
 
 * Python
 
 * spaCy NLP library
 
-### 📂 Project Structure
+## 📂 Project Structure
 
 ```
 ai-projects/
@@ -70,16 +68,16 @@ ai-projects/
 └── venv/             # Virtual environment (not recommended to push to GitHub)
 ```
 
-### ⚙️ Installation
+## ⚙️ Installation
 
-##### 1️⃣ Clone the repository
+### 1️⃣ Clone the repository
 
 ```
 git clone https://github.com/yourusername/ai-projects.git
 cd ai-projects
 ```
 
-##### 2️⃣ Create a virtual environment
+### 2️⃣ Create a virtual environment
 
 ```
 python -m venv venv
@@ -99,7 +97,7 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-##### 3️⃣ Install dependencies
+### 3️⃣ Install dependencies
 
 ```
 pip install spacy
@@ -111,7 +109,7 @@ Download the English language model:
 python -m spacy download en_core_web_sm
 ```
 
-### ▶️ Running the Chatbot
+## ▶️ Running the Chatbot
 
 Run the script:
 
@@ -137,7 +135,7 @@ You: bye
 Bot: Goodbye! Have a great day!
 ```
 
-### 📈 Future Improvements
+## 📈 Future Improvements
 
 * Add more intents and responses
 
@@ -149,7 +147,7 @@ Bot: Goodbye! Have a great day!
 
 * Integrate with messaging platforms
 
-### 🎓 Learning Goals
+## 🎓 Learning Goals
 
 This project demonstrates:
 
