@@ -28,7 +28,7 @@ def get_intent(user_input):
     
 # function to get output
 def faq_bot():
-    print("Hi! I'm your assistabt. Ask me anything!")
+    print("Hi! I'm your assistant. Ask me anything!")
 
     while True:
         user_input = input("You: ")
