@@ -13,43 +13,31 @@ The chatbot detects user intent using lemmatization and simple keyword matching 
 
 * Continuous chat loop
 
+* Conversation logging
+
 * Clean and beginner-friendly Python implementation
 
 ## 🧠 How It Works
 
-The chatbot processes user input using spaCy's NLP pipeline. The input text is:
+1. The chatbot processes user input using spaCy's NLP pipeline:
+   - Converts text to lowercase
+   - Tokenizes the text
+   - Lemmatizes words (e.g., `contacted → contact`, `contacting → contact`)
 
-* Converted to lowercase
+2. The bot checks tokens against predefined keywords to determine the user’s intent.
 
-* Tokenized
-
-* Lemmatized (words are reduced to their base form)
-
-Example:
-
-contacted → contact
-
-contacting → contact
-
-This allows the bot to recognize similar intents even when the wording changes.
-
-The bot then checks the processed tokens against predefined keywords to determine the user's intent.
+3. A response dictionary maps intents to bot responses for cleaner, scalable code.
 
 Example intents:
 
-* Greeting
-
-* Business hours
-
-* Location
-
-* Contact information
-
-* Pricing
-
-* Services
-
-* Exit / Goodbye
+- Greeting
+- Business hours
+- Location
+- Contact information
+- Services
+- Pricing
+- Help
+- Exit / Goodbye
 
 ## 🛠 Technologies Used
 
@@ -64,7 +52,9 @@ ai-projects/
 │
 ├── chatbot.py        # Main chatbot script
 ├── README.md         # Project documentation
-├── requirements.txt  # Dependencies
+├── chat_log.txt      # Generated automatically when you run the bot
+├── requirements.txt  # Python dependencies
+├── .gitignore        # Ignore venv, pycache, etc.
 └── venv/             # Virtual environment (not recommended to push to GitHub)
 ```
 
@@ -100,7 +90,7 @@ source venv/bin/activate
 ### 3️⃣ Install dependencies
 
 ```
-pip install spacy
+pip install -r requirements.txt
 ```
 
 Download the English language model:
@@ -135,6 +125,8 @@ You: bye
 Bot: Goodbye! Have a great day!
 ```
 
+All conversations are automatically saved to chat_log.txt with timestamps.
+
 ## 📈 Future Improvements
 
 * Add more intents and responses
@@ -158,5 +150,7 @@ This project demonstrates:
 * Rule-based chatbot logic
 
 * Python project structure
+
+* Conversation logging for real-world applications
 
 It is designed as a beginner NLP project for learning how conversational bots work.

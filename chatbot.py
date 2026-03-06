@@ -1,5 +1,6 @@
 # imports
 import spacy
+from datetime import datetime # for logging
 
 # load the English NLP model
 nlp = spacy.load("en_core_web_sm")
@@ -52,9 +53,14 @@ def faq_bot():
     while True:
         user_input = input("You: ")
         intent = get_intent(user_input)
+        bot_response = responses[intent]
 
         # print response from dictionary
-        print("Bot: ", responses[intent])
+        print("Bot: ", bot_response)
+
+        # log conversation to a file
+        with open("chat_log.txt", "a", encoding="utf-8") as log_file:
+            log_file.write(f"{datetime.now()} | User: {user_input} | Bot: {bot_response}\n")
 
         # exit condition
         if intent == "goodbye":
