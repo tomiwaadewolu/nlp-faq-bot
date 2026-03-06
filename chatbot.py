@@ -4,6 +4,19 @@ import spacy
 # load the English NLP model
 nlp = spacy.load("en_core_web_sm")
 
+# define the possible responses in a dictionary
+responses = {
+    "greeting": "Hello! How can I assist you today?",
+    "hours": "We're open from 9AM to 5PM, Mon to Fri",
+    "location": "We're located at 222 Main Drive, City",
+    "contact": "You can contact us at email@email.com",
+    "goodbye": "Goodbye! Have a great day!",
+    "services": "We offer consulting, support, and development services",
+    "pricing": "Please contact us at email@email.com for detailed pricing information",
+    "help": "You can ask me about our hours, location, services, or contact information",
+    "unknown": "Not sure how to respond to that..."
+}
+
 # function to get intent
 def get_intent(user_input):
     doc = nlp(user_input.lower()) # to lower case
@@ -23,6 +36,12 @@ def get_intent(user_input):
         return "contact"
     elif "bye" in lemmas or "exit" in lemmas or "goodbye" in lemmas:
         return "goodbye"
+    elif "service" in lemmas or "offer" in lemmas:
+        return "services"
+    elif "price" in lemmas or "cost" in lemmas:
+        return "pricing"
+    elif "help" in lemmas:
+        return "help"
     else:
         return "unknown"
     
@@ -34,19 +53,13 @@ def faq_bot():
         user_input = input("You: ")
         intent = get_intent(user_input)
 
-        if intent == "greeting":
-            print("Bot: Hello! How can I assist you today?")
-        elif intent == "hours":
-            print("Bot: We're open from 9AM to 5PM, Mon to Fri")
-        elif intent == "location":
-            print("Bot: We're located at 222 Main Drive, City")
-        elif intent == "contact":
-            print("Bot: You can contact us at email@email.com")
-        elif intent == "goodbye":
-            print("Bot: Goodbye! Have a great day!")
+        # print response from dictionary
+        print("Bot: ", responses[intent])
+
+        # exit condition
+        if intent == "goodbye":
             break
-        else:
-            print("Bot: Not sure how to respond to that...")
 
 # run the bot
-faq_bot()
+if __name__ == "__main__":
+    faq_bot()
