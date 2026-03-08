@@ -102,7 +102,7 @@ nlp-faq-bot/
 ### 1️. Clone the repository
 
 ```
-git clone https://github.com/yourusername/nlp-faq-bot.git
+git clone https://github.com/tomiwaadewolu/nlp-faq-bot.git
 cd nlp-faq-bot
 ```
 
