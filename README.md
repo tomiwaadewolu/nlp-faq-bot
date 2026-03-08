@@ -3,7 +3,7 @@
 A simple command-line FAQ chatbot built with Python using natural language processing from spaCy.
 The chatbot detects user intent using lemmatization and simple keyword matching to respond to common questions like greetings, business hours, location, and contact information.
 
-## 📌 Features
+## Features
 
 * Intent detection using NLP
 
@@ -17,7 +17,7 @@ The chatbot detects user intent using lemmatization and simple keyword matching 
 
 * Clean and beginner-friendly Python implementation
 
-## 🧠 How It Works
+## How It Works
 
 1. The chatbot processes user input using spaCy's NLP pipeline:
    - Converts text to lowercase
@@ -39,13 +39,13 @@ Example intents:
 - Help
 - Exit / Goodbye
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * Python
 
 * spaCy NLP library
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ai-projects/
@@ -58,16 +58,16 @@ ai-projects/
 └── venv/             # Virtual environment (not recommended to push to GitHub)
 ```
 
-## ⚙️ Installation
+## Installation
 
-### 1️⃣ Clone the repository
+### 1️. Clone the repository
 
 ```
 git clone https://github.com/yourusername/nlp-faq-bot.git
 cd nlp-faq-bot
 ```
 
-### 2️⃣ Create a virtual environment
+### 2️. Create a virtual environment
 
 ```
 python -m venv venv
@@ -87,7 +87,7 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### 3️⃣ Install dependencies
+### 3️. Install dependencies
 
 ```
 pip install -r requirements.txt
@@ -99,7 +99,7 @@ Download the English language model:
 python -m spacy download en_core_web_sm
 ```
 
-## ▶️ Running the Chatbot
+## Running the Chatbot
 
 Run the script:
 
@@ -127,7 +127,7 @@ Bot: Goodbye! Have a great day!
 
 All conversations are automatically saved to chat_log.txt with timestamps.
 
-## 📈 Future Improvements
+## Future Improvements
 
 * Add more intents and responses
 
@@ -139,7 +139,7 @@ All conversations are automatically saved to chat_log.txt with timestamps.
 
 * Integrate with messaging platforms
 
-## 🎓 Learning Goals
+## Learning Goals
 
 This project demonstrates:
 
