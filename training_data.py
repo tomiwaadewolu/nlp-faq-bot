@@ -39,7 +39,14 @@ training_sentences = [
 
     ("help me", "help"),
     ("what can I ask", "help"),
+    ("help", "help"),
+    ("need help", "help"),
+    ("can you help me", "help"),
+    ("how do I ask", "help"),
 
     ("bye", "goodbye"),
-    ("goodbye", "goodbye")
+    ("goodbye", "goodbye"),
+    ("see you", "goodbye"),
+    ("exit", "goodbye"),
+    ("talk later", "goodbye")
 ]

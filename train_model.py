@@ -4,6 +4,9 @@
 # to save the trained model to a file so it can be loaded later without retraining
 import pickle 
 
+# for preporocessing
+import spacy
+
 # TfidfVectorizer converts text to numerical vectors using TF_IDF
 # ML models cannot work directly with text, so sentences must be converted to numbers first
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,11 +18,24 @@ from sklearn.linear_model import LogisticRegression
 # import the training data with the example sentences and labels
 from training_data import training_sentences
 
+# load the English NLP model
+nlp = spacy.load("en_core_web_sm")
+
+# function to preprocess the user input
+def preprocess(text):
+    doc = nlp(text.lower()) # to lower case
+
+    # extract lemmatized tokens for better matchings
+    # lemmatization (turning “contacted”, “contacting” → “contact”)
+    lemmas = [token.lemma_ for token in doc]
+
+    return " ".join(lemmas)
+
 # STEP 1: Separate text and labels
 
 # extract the user sentences from the training data
 # x[0] is the first element in each tuple (the sentence)
-texts = [x[0].lower() for x in training_sentences]
+texts = [preprocess(x[0]) for x in training_sentences]
 
 # extract the intent labels from the training data
 # x[1] is the second element in each tuple (the intent)
