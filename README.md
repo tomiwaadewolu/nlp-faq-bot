@@ -1,7 +1,8 @@
-# FAQ Chatbot (spaCy NLP + Machine Learning)
+# FAQ Chatbot (spaCy NLP + Machine Learning + Web Interface)
 
-A simple command-line FAQ chatbot built with Python using natural language processing from spaCy and a machine learning model for intent classification.
+A simple FAQ chatbot built with Python using spaCy NLP and a machine learning model for intent classification.
 The chatbot detects user intent using lemmatization and TF-IDF + Logistic Regression, allowing it to respond to common questions like greetings, business hours, location, and contact information.
+It also includes a web interface built with Flask.
 
 ## Features
 
@@ -13,7 +14,9 @@ The chatbot detects user intent using lemmatization and TF-IDF + Logistic Regres
 
 * Simple dictionary-based responses
 
-* Continuous chat loop
+* Continuous chat loop in CLI
+
+* Web-based chat interface with Flask
 
 * Automatic conversation logging with timestamps
 
@@ -35,11 +38,15 @@ The chatbot detects user intent using lemmatization and TF-IDF + Logistic Regres
 3. Intent Prediction:
 
    A Logistic Regression classifier predicts the intent based on the TF-IDF vector.
-   Optionally, if the model is unsure (low probability), it can return "unknown".
+   If the model is unsure, it can return "unknown".
 
 4. Response Selection:
 
    Each intent is mapped to a predefined response dictionary. The bot replies accordingly.
+
+5. Web Interface:
+
+   Users can interact via a browser. Messages are sent to the Flask backend, which uses the trained ML model to predict intent and return responses in real-time.
 
 Example intents:
 
@@ -61,16 +68,28 @@ Example intents:
 
 * scikit-learn (TF-IDF and Logistic Regression)
 
+* Flask (web interface)
+
+* HTML/CSS/JavaScript (frontend)
+
 ## Project Structure
 
 ```
 nlp-faq-bot/
 │
-├── chatbot.py        # Main chatbot script
+├── chatbot.py        # Main chatbot script (CLI)
 ├── train_model.py    # Model training script
 ├── training_data.py  # Training examples for intents
 ├── intent_model.pkl  # Saved trained model
 ├── vectorizer.pkl    # Saved TF-IDF vectorizer
+├── app.py            # Flask web interface
+├── templates/
+│   └── index.html    # HTML page for web interface
+├── static/
+│   ├── css/
+│   │   └── style.css # Styling for web interface
+│   └── js/
+│       └── script.js # JavaScript for frontend interactions
 ├── README.md         # Project documentation
 ├── chat_log.txt      # Automatically generated conversation logs
 ├── requirements.txt  # Python dependencies
@@ -135,7 +154,7 @@ This will:
 
 ## Running the Chatbot
 
-Run the script:
+### Command-Line Interface
 
 ```
 python chatbot.py
@@ -159,6 +178,17 @@ You: bye
 Bot: Goodbye! Have a great day!
 ```
 
+### Web Interface (Flask)
+
+```
+python app.py
+```
+
+Open a browser and go to: `http://127.0.0.1:5000/`
+- Type messages in the input box
+- Press Enter or click Send
+- The bot responds in real-time using the ML intent model
+
 All conversations are automatically saved to `chat_log.txt` with timestamps.
 
 ## Future Improvements
@@ -167,7 +197,7 @@ All conversations are automatically saved to `chat_log.txt` with timestamps.
 
 * Implement confidence threshold and automatic fallback for unknown inputs
 
-* Add a web interface using Flask or FastAPI
+* Enhance web interface (styling, message history, user avatars)
 
 * Store responses in a database
 
@@ -182,6 +212,8 @@ This project demonstrates:
 * Intent recognition using TF-IDF and Logistic Regression
 
 * Rule-based response mapping
+
+* Flask-based web interface integration
 
 * Python project structure and modular code
 
