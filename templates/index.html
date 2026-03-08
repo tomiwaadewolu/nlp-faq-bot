@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FAQ Chatbot</title>
+        <!-- Link to external CSS -->
+         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+    </head>
+
+    <body>
+        <div class="chat-container">
+            <div class="chat-header">
+                FAQ Chatbot
+            </div>
+
+            <div class="chat-body" id="chat-body">
+                <div class="bot-msg chat-message">
+                    <div class="msg-bubble">Hi! I'm your assistant. Ask me anything!</div>
+                </div>
+            </div>
+
+            <div class="chat-footer">
+                <input type="text" id="user-input" placeholder="Type your message here..." autofocus>
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Link to external JavaScript -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>

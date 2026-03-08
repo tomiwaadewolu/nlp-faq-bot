@@ -10,6 +10,7 @@ training_sentences = [
     ("what time do you open", "hours"),
     ("opening hours", "hours"),
     ("when are you open", "hours"),
+    ("hours", "hours"),
 
     ("where are you located", "location"),
     ("what is your address", "location"),
@@ -23,6 +24,8 @@ training_sentences = [
     ("what is your email", "contact"),
     ("phone number please", "contact"),
     ("contact info", "contact"),
+    ("contact", "contact"),
+    ("contact information", "contact"),
 
     ("what services do you offer", "services"),
     ("tell me about your services", "services"),
