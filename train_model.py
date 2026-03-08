@@ -19,7 +19,7 @@ from training_data import training_sentences
 
 # extract the user sentences from the training data
 # x[0] is the first element in each tuple (the sentence)
-texts = [x[0] for x in training_sentences]
+texts = [x[0].lower() for x in training_sentences]
 
 # extract the intent labels from the training data
 # x[1] is the second element in each tuple (the intent)
@@ -29,7 +29,7 @@ labels = [x[1] for x in training_sentences]
 
 # create a TF_IDF vectorizer object
 # this will convert sentences into numerical feature vectors
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(lowercase=True, ngram_range=(1,2))
 
 # use fit_transform to
 # 1. learn the vocab from the training sentences

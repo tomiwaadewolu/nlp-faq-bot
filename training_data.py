@@ -14,16 +14,28 @@ training_sentences = [
     ("where are you located", "location"),
     ("what is your address", "location"),
     ("where is your office", "location"),
+    ("location", "location"),
+    ("your location", "location"),
+    ("where are you", "location"),
+    ("address", "location"),
 
     ("how can I contact you", "contact"),
     ("what is your email", "contact"),
     ("phone number please", "contact"),
+    ("contact info", "contact"),
 
     ("what services do you offer", "services"),
     ("tell me about your services", "services"),
+    ("services", "services"),
+    ("what do you offer", "services"),
 
     ("how much does it cost", "pricing"),
     ("pricing details", "pricing"),
+    ("what are your prices", "pricing"),
+    ("price list", "pricing"),
+    ("cost of services", "pricing"),
+    ("service pricing", "pricing"),
+    ("pricing info", "pricing"),
 
     ("help me", "help"),
     ("what can I ask", "help"),
