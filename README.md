@@ -51,6 +51,10 @@ Example intents:
 ai-projects/
 │
 ├── chatbot.py        # Main chatbot script
+├── train_model.py    # Model training script
+├── training_data.py  # Model training data
+├── intent_model.pkl  # Trained model classifier
+├── vectorizer.pkl    # Saved TF-IDF vectorizer
 ├── README.md         # Project documentation
 ├── chat_log.txt      # Generated automatically when you run the bot
 ├── requirements.txt  # Python dependencies
