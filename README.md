@@ -200,7 +200,17 @@ All conversations are automatically saved to `chat_log.txt` with timestamps.
 
 ### Running the Test Suite
 
+This project includes automated tests for preprocessing, intent prediction, pipeline, API, and edge cases.
+
+Run all tests with:
+
 `pytest -v`
+
+The tests: 
+
+- Ensure the chatbot correctly predicts intents
+- Verify preprocessing, pipeline, and API functionality
+- Cover edge cases like empty input, gibberish, long messages, and mixed intents
 
 ## Future Improvements
 
