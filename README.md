@@ -90,6 +90,13 @@ nlp-faq-bot/
 │   │   └── style.css # Styling for web interface
 │   └── js/
 │       └── script.js # JavaScript for frontend interactions
+├── tests/
+│   ├── test_preprocessing.py
+│   ├── test_model.py
+│   ├── test_pipeline.py
+│   ├── test_api.py
+│   ├── test_edge_cases.py
+│   └── conftest.py
 ├── README.md         # Project documentation
 ├── chat_log.txt      # Automatically generated conversation logs
 ├── requirements.txt  # Python dependencies
@@ -190,6 +197,10 @@ Open a browser and go to: `http://127.0.0.1:5000/`
 - The bot responds in real-time using the ML intent model
 
 All conversations are automatically saved to `chat_log.txt` with timestamps.
+
+### Running the Test Suite
+
+`pytest -v`
 
 ## Future Improvements
 

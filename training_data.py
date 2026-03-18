@@ -11,6 +11,12 @@ training_sentences = [
     ("opening hours", "hours"),
     ("when are you open", "hours"),
     ("hours", "hours"),
+    ("what are your hours", "hours"),
+    ("what time do you close", "hours"),
+    ("are you open today", "hours"),
+    ("when do you close", "hours"),
+    ("business hours please", "hours"),
+    ("what time do you start work", "hours"),
 
     ("where are you located", "location"),
     ("what is your address", "location"),
