@@ -95,7 +95,7 @@ nlp-faq-bot/
 │   ├── test_model.py
 │   ├── test_pipeline.py
 │   ├── test_api.py
-    ├── test_cli.py
+|   ├── test_cli.py
 │   ├── test_edge_cases.py
 │   └── conftest.py
 ├── README.md         # Project documentation
